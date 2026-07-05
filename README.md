@@ -492,7 +492,7 @@ Los tests **no** requieren una base de datos real corriendo: el modelo `Pet` se 
 ### Build de la imagen
 
 ```bash
-docker build -t <tu_usuario_dockerhub>/adoption-api:1.0.0 .
+docker build -t santixpz/adoption-api:1.0.0 .
 ```
 
 ### Ejecutar el contenedor
@@ -503,7 +503,7 @@ docker run -d \
   -p 3000:3000 \
   --env-file .env \
   -e MONGO_URI="mongodb://host.docker.internal:27017/auth_system" \
-  <tu_usuario_dockerhub>/adoption-api:1.0.0
+  santixpz/adoption-api:1.0.0
 ```
 
 O, más simple, levantando API + MongoDB juntos:
@@ -521,19 +521,19 @@ docker ps
 ### Escaneo básico de seguridad
 
 ```bash
-docker scout quickview <tu_usuario_dockerhub>/adoption-api:1.0.0
-docker scout cves <tu_usuario_dockerhub>/adoption-api:1.0.0
+docker scout quickview santixpz/adoption-api:1.0.0
+docker scout cves santixpz/adoption-api:1.0.0
 ```
 
 ### Publicar en DockerHub
 
 ```bash
 docker login
-docker push <tu_usuario_dockerhub>/adoption-api:1.0.0
+docker push santixpz/adoption-api:1.0.0
 ```
 
 La imagen queda disponible en:
-`https://hub.docker.com/r/<tu_usuario_dockerhub>/adoption-api`
+`https://hub.docker.com/r/santixpz/adoption-api`
 
 ### Notas de la imagen
 
